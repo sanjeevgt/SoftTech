@@ -1,0 +1,18 @@
+<h5>Edit Product</h5>
+<div class="row" *ngIf="product">
+    <div class="col-6">
+        <img src="{{product.pictureUrl}}" alt="{{product.prodName}}" class="img-fluid w-100">
+    </div>
+    
+    <div class="col-6">
+        <h3>{{product.prodName}}</h3>
+        <p>{{product.price |  currency : 'INR':'symbol':'1.0-0'}}</p>
+        
+    </div>
+    <div class="row mt-5">
+        <div class="col-12 ml-3">
+            <h4>Description</h4>
+            <p>{{product.prodDescription}}</p>
+        </div>
+    </div>
+</div> 

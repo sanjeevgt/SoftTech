@@ -1,0 +1,28 @@
+<div class="card h-100 shadow-sm">
+    <img src="{{product.pictureUrl}}" alt="{{product.prodName}}" class="img-fluid bg-info">
+    <div class="card-body d-flex flex-column">
+        <a routerLink="/shop/{{product.id}}">
+            <h6 class="text-uppercase">{{product.prodName}}</h6>
+        </a>
+        <span class="mb-2">Price : {{product.price | currency : 'INR':'symbol':'1.0-0' }}</span>
+       
+        <span class="mb-2">Description : {{product.prodDescription }}</span>
+         <!-- This need to formated More not working as per expectation -->
+        
+        <span class="mb-2"> {{ product.atttributes[0]?.RAM}} 
+             {{ product.atttributes[0]?.FrontCarma }} 
+             {{ product.atttributes[0]?.RearCarma }} 
+             {{ product.atttributes[0]?.Color}} 
+             {{ product.atttributes[0]?.Make }} 
+             {{ product.atttributes[0]?.Model }} 
+        </span>
+        <span  class="mb-2" *ngIf="!product.atttributes[0]?.RAM"></span>
+        <!-- </div>  -->
+        <div class="btn-group mt-auto">
+        <button class="btn btn-outline-secondary mr-2"  type="button"  > Delete </button>
+        <button routerLink="/shop/{{product.id}}" type="button" class="btn btn-outline-secondary">Edit</button>
+        </div>
+
+    </div>
+
+

@@ -6,13 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities
+namespace Core.Entites
 {
     [Table("ProductCategory")]
-    public  class ProductCategory
+    public class ProductCategory :BaseEntity
     {
-        [Key]
-        public int ProdCatId { get; set; }
-        public string CategoryName { get; set; }
+      public string CategoryName { get; set; }
+
     }
 }
